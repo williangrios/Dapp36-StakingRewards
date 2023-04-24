@@ -1,0 +1,6 @@
+.divisor{
+    margin: 15px;
+    height:2px;
+    background: linear-gradient(90deg, rgba(238, 238, 238, 1) 0%, rgba(136, 136, 146, 1) 49%, rgba(238, 238, 238, 1) 100%)
+
+}

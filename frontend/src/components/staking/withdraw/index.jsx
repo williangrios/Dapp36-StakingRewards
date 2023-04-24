@@ -1,7 +1,18 @@
+import { Button } from "../../common";
+import Subtitle from "../../common/subtitle";
 
 const Withdraw = ()=> {
-    return (
-        <h1>Withdraw</h1>
+    
+    const handleWithdraw = (e)=> {
+        e.preventDefault();
+    }
+
+    return (<>
+            <Subtitle>Withdraw</Subtitle>
+            <form onSubmit={handleWithdraw}>
+                <Button>Withdraw tokens</Button>
+            </form>
+        </>
     )
 }
 

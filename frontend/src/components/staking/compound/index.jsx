@@ -1,7 +1,19 @@
+import { Button, Divisor } from "../../common";
+import Subtitle from "../../common/subtitle";
 
 const Compound = ()=> {
-    return (
-        <h1>Compound</h1>
+
+    const handleCompound = (e)=> {
+        e.preventDefault();
+    }
+
+    return (<>
+            <Subtitle>Compound</Subtitle>
+            <form onSubmit={handleCompound}>
+                <Button>Compound tokens</Button>
+            </form>
+            <Divisor/>
+        </>
     )
 }
 

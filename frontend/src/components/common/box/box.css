@@ -1,0 +1,36 @@
+.box{
+    width:400px;
+    border-radius: 9px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 2px #666;
+    border-right: solid 2px #666;
+}
+
+.info-box{
+    padding: 0px 10px 20px;
+    background-color: #eee;
+    border-radius: 0 0 9px 9px;
+}
+
+.title-box{
+    border-radius: 9px 9px 0 0;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-box > img{
+    width: 70px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.title{
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}

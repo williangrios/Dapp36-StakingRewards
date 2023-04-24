@@ -1,11 +1,16 @@
-const Box = ({children, title}) => {
+import "./box.css";
+
+const Box = ({children, title, imageAddress, underlined}) => {
     return(
-        <div>
-            <h3>{title}</h3>
-            {children}
+        <div className="box box-bottom-border">
+            <div className="title-box">
+                <img src={imageAddress}></img>
+                <h3 className="title">{title}</h3>
+            </div>
+            <div className="info-box">
+                {children}
+            </div>
         </div>
-            
-        
     )
 }
 

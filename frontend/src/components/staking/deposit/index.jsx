@@ -1,7 +1,20 @@
+import { Button, Divisor } from "../../common";
+import Subtitle from "../../common/subtitle";
 
 const Deposit = ()=> {
-    return (
-        <h1>Deposit</h1>
+
+    const handleDeposit = (e)=> {
+        e.preventDefault();
+    }
+
+    return (<>
+        <Subtitle>Deposit</Subtitle>
+        <form onSubmit={handleDeposit}>
+            <Button>Deposit tokens</Button>
+        </form>
+        <Divisor/>
+    </>
+    
     )
 }
 

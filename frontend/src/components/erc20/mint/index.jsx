@@ -1,12 +1,18 @@
+import { Button, Divisor, Subtitle } from "../../common";
+
+
 const Mint = () => {
 
-    const handleMint = ()=> {
+    const handleMint = (e)=> {
+        e.preventDefault();
         alert("minted");
     }
 
     return(<>
-        <h1>Mint ERC20 tokens</h1>
-        <button onClick={handleMint}>Mint 100,000 tokens</button>
+        <Subtitle>Mint ERC20 Token</Subtitle>
+        <form onSubmit={handleMint}>
+            <Button>Mint 100,000 tokens</Button>
+        </form>
     </>
     )
 }

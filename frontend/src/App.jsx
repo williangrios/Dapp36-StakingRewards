@@ -15,9 +15,6 @@ function App() {
       {/* <ToastContainer position='top-center' autoclose={5000}/> */}
       <WRHeader title='ERC20 Staking' image={true}/>
       <WRContent>
-        <div className='br-red-300'>
-
-        </div>
         <Box title={"ERC20 Tokens"} imageAddress={"https://cdn-icons-png.flaticon.com/512/2272/2272825.png"}>
           <Mint/>
         </Box>

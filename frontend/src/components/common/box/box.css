@@ -1,5 +1,5 @@
-.box{
-    width:400px;
+.box {
+    width: 400px;
     border-radius: 9px;
     margin: 20px auto;
     display: flex;
@@ -8,13 +8,13 @@
     border-right: solid 2px #666;
 }
 
-.info-box{
+.info-box {
     padding: 0px 10px 20px;
     background-color: #eee;
     border-radius: 0 0 9px 9px;
 }
 
-.title-box{
+.title-box {
     border-radius: 9px 9px 0 0;
     background-color: purple;
     display: flex;
@@ -22,13 +22,13 @@
     justify-content: center;
 }
 
-.title-box > img{
+.title-box > img {
     width: 70px;
     margin: auto;
     margin-top: 20px;
 }
 
-.title{
+.title {
     color: white;
     display: block;
     text-align: center;

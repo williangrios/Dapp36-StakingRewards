@@ -1,8 +1,5 @@
+const Subtitle = ({ children }) => {
+    return <h4>{children}</h4>;
+};
 
-const Subtitle = ({children}) => {
-    return(
-        <h4>{children}</h4>
-    )
-}
-
-export default Subtitle
+export default Subtitle;

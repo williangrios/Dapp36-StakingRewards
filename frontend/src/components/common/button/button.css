@@ -1,14 +1,14 @@
-.button{
+.button {
     background-color: #444;
     padding: 10px;
     color: white;
-    border-radius:10px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     width: 100%;
     transition: 0.5s;
 }
 
-.button:hover{
+.button:hover {
     background-color: #666;
 }

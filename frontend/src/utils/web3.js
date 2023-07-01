@@ -3,7 +3,7 @@ import { stakingAddress, tokenERC20Address } from "./addresses";
 import ERC20Contract from "../artifacts/contracts/TokenERC20.sol/TokenERC20.json";
 import StakingContract from "../artifacts/contracts/ERC20Staking.sol/ERC20Staking.json";
 
-export async function connectWallet(){
+export async function connectWallet() {
     try {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const userAccount = await provider.send('eth_requestAccounts', []);
@@ -16,12 +16,12 @@ export async function connectWallet(){
             stakingSigner: new ethers.Contract(stakingAddress, StakingContract.abi, provider.getSigner())
         };
         console.log(ob);
-        return  ob
+        return ob
     } catch (error) {
-        return(error.message)
+        return (error.message)
     }
 }
 
-export async function getAlchemyProvider(){
+export async function getAlchemyProvider() {
     return new ethers.providers.JsonRpcProvider('https://polygon-mumbai.g.alchemy.com/v2/di4KdLr9SEe1oT-DO1muEFJzSsBWZD5F');
 }

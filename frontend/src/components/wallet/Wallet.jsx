@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { Button, Subtitle } from "../common";
 import { connectWallet } from "../../utils/web3";
 
-
-export default function Wallet({connection, setConnection}) {
-
+export default function Wallet({ connection, setConnection }) {
     async function handleConnect(e) {
         e.preventDefault();
         await connectWallet().then((data) => setConnection(data));
     }
     function handleDisconnect(e) {
         e.preventDefault();
-        setConnection({connected: false, account: '', provider: null, erc20Signer: null, stakingSigner: null});
+        setConnection({
+            connected: false,
+            account: "",
+            provider: null,
+            erc20Signer: null,
+            stakingSigner: null,
+        });
     }
 
     return (

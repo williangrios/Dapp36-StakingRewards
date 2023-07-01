@@ -1,9 +1,7 @@
-import './divisor.css'
+import "./divisor.css";
 
 const Divisor = () => {
-    return(
-        <div className="divisor"></div>
-    )
-}
+    return <div className="divisor"></div>;
+};
 
 export default Divisor;

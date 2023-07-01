@@ -14,7 +14,7 @@ export default function StakingData({ connection }) {
 
     const [userStakingData, setUserStakingData] = useState({
         userTokensInStake: 0,
-        userRewards: 0
+        userRewards: 0,
     });
 
     async function getContractData() {
@@ -35,9 +35,13 @@ export default function StakingData({ connection }) {
 
     async function getUserStakingData() {
         const response = {
-            userTokensInStake: (await connection.stakingSigner.balanceOf(connection.account)).toString(),
-            userRewards: (await connection.stakingSigner.rewards(connection.account)).toString()
-        }
+            userTokensInStake: (
+                await connection.stakingSigner.balanceOf(connection.account)
+            ).toString(),
+            userRewards: (
+                await connection.stakingSigner.rewards(connection.account)
+            ).toString(),
+        };
         setUserStakingData(response);
     }
 
@@ -55,7 +59,10 @@ export default function StakingData({ connection }) {
             {connection.connected && (
                 <>
                     <Subtitle>Your Data</Subtitle>
-                    <p>Your tokens in stake: { userStakingData.userTokensInStake}</p>
+                    <p>
+                        Your tokens in stake:{" "}
+                        {userStakingData.userTokensInStake}
+                    </p>
                     <p>Rewards: {userStakingData.userRewards}</p>
                     <p></p>
                 </>

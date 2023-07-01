@@ -1,10 +1,15 @@
 import { Button, Divisor } from "../../common";
 import Subtitle from "../../common/subtitle";
 
-const Claim = ()=> {
+export default function Claim ({connection}){
 
-    const handleClaim = (e)=> {
+    async function handleClaim(e){
         e.preventDefault();
+        if (connection.connected){
+            alert("minted");
+        }else{
+            alert("you are not connected");
+        }
     }
 
     return (<>
@@ -16,5 +21,3 @@ const Claim = ()=> {
     </>
     )
 }
-
-export default Claim;

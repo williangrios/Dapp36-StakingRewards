@@ -1,20 +1,30 @@
-import { Button, Divisor, Subtitle } from "../../common";
+import { useEffect } from "react";
+import { Button, Subtitle } from "../../common";
 
+export default function Mint ({connection}) {
 
-const Mint = () => {
+    useEffect(() => {
+        console.log(connection);
+    }, [])
 
-    const handleMint = (e)=> {
+    async function handleMint (e) {
         e.preventDefault();
-        alert("minted");
+        if (connection.connected){
+            alert("minted");
+        }else{
+            alert("you are not connected");
+        }
     }
 
     return(<>
         <Subtitle>Mint ERC20 Token</Subtitle>
+        <p>Token name:</p>
+        <p>Token symbol:</p>
+        <p>Total supply:</p>
+        <p>Decimals:</p>
         <form onSubmit={handleMint}>
             <Button>Mint 100,000 tokens</Button>
         </form>
     </>
     )
 }
-
-export default Mint;

@@ -1,0 +1,2 @@
+export const tokenERC20Address = '0x8576162329b891C1Bd06B18032962855C235159c'
+export const stakingAddress = '0x607fc3e692d9D1B1B9DBAbe3A60CF5C27309A386'

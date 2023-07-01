@@ -1,19 +1,26 @@
-import { Button } from "../../common";
+import { useState } from "react";
+import { Button, Input } from "../../common";
 import Subtitle from "../../common/subtitle";
 
-const Withdraw = ()=> {
+export default function Withdraw ({connection}) {
+
+    const [withdrawAmount, setWithdrawAmount] = useState(10);
     
-    const handleWithdraw = (e)=> {
+    async function handleWithdraw (e) {
         e.preventDefault();
+        if (connection.connected){
+            alert("minted");
+        }else{
+            alert("you are not connected");
+        }
     }
 
     return (<>
             <Subtitle>Withdraw</Subtitle>
             <form onSubmit={handleWithdraw}>
+                <Input value={withdrawAmount} setValue={setWithdrawAmount} />
                 <Button>Withdraw tokens</Button>
             </form>
         </>
     )
 }
-
-export default Withdraw;

@@ -1,10 +1,15 @@
 import { Button, Divisor } from "../../common";
 import Subtitle from "../../common/subtitle";
 
-const Compound = ()=> {
+export default function Compound ({connection}){
 
-    const handleCompound = (e)=> {
+    async function handleCompound (e) {
         e.preventDefault();
+        if (connection.connected){
+            alert("minted");
+        }else{
+            alert("you are not connected");
+        }
     }
 
     return (<>
@@ -17,4 +22,3 @@ const Compound = ()=> {
     )
 }
 
-export default Compound;

@@ -29,17 +29,16 @@ export default function StakingData({ connection }) {
             rewardsPerHour: (await contract.rewardsPerHour()).toString(),
             totalRewards: (await contract.totalRewards()).toString(),
         };
-        console.log(response);
         setContractStakingData(response);
     }
 
     async function getUserStakingData() {
         const response = {
             userTokensInStake: (
-                await connection.stakingSigner.balanceOf(connection.account)
+                await connection.stakingContract.balanceOf(connection.account)
             ).toString(),
             userRewards: (
-                await connection.stakingSigner.rewards(connection.account)
+                await connection.stakingContract.rewards(connection.account)
             ).toString(),
         };
         setUserStakingData(response);
@@ -60,7 +59,7 @@ export default function StakingData({ connection }) {
                 <>
                     <Subtitle>Your Data</Subtitle>
                     <p>
-                        Your tokens in stake:{" "}
+                        Your tokens in stake: 
                         {userStakingData.userTokensInStake}
                     </p>
                     <p>Rewards: {userStakingData.userRewards}</p>

@@ -21,9 +21,10 @@ function App() {
         connected: false,
         account: "",
         provider: null,
-        erc20Signer: null,
-        stakingSigner: null,
+        erc20Contract: null,
+        stakingContract: null,
     });
+    const [loading, setLoading] = useState(false);
 
     return (
         <div className="App">
@@ -39,6 +40,7 @@ function App() {
                     <Wallet
                         connection={connection}
                         setConnection={setConnection}
+                        loading={loading}
                     />
                 </Box>
                 <Box
@@ -55,11 +57,11 @@ function App() {
                         "https://paycent.com/wp-content/themes/twentysixteen-child/assets/img/blue/img-gain-massive.png"
                     }
                 >
-                    <StakingData connection={connection} />
-                    <Deposit connection={connection} />
-                    <Compound connection={connection} />
-                    <Claim connection={connection} />
-                    <Withdraw connection={connection} />
+                    <StakingData connection={connection} loading={loading} setLoading={setLoading}/>
+                    <Deposit connection={connection}  loading={loading} setLoading={setLoading}/>
+                    <Compound connection={connection}  loading={loading} setLoading={setLoading}/>
+                    <Claim connection={connection}  loading={loading} setLoading={setLoading}/>
+                    <Withdraw connection={connection}  loading={loading} setLoading={setLoading}/>
                 </Box>
             </WRContent>
             <WRTools
